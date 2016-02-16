@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<transactions>
+<item d="2010-01-01" fs="10000" fq="0" fp="1" fc="0" ts="30001" tq="2500" tp="1" tc="0" de="initial description"/>
+<item d="2010-01-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2010-01-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2010-01-15" fs="30000" fq="579" fp="1" fc="0" ts="20000" tq="579" tp="1" tc="0" de="Living expenses"/>
+<item d="2010-01-15" fs="30000" fq="224" fp="1" fc="0" ts="21000" tq="224" tp="1" tc="0" de="Food expenses"/>
+<item d="2010-01-15" fs="30000" fq="234" fp="1" fc="0" ts="22000" tq="234" tp="1" tc="0" de="Clothes"/>
+<item d="2010-01-15" fs="30000" fq="118" fp="1" fc="0" ts="23000" tq="118" tp="1" tc="0" de="Transportation"/>
+<item d="2010-01-15" fs="30000" fq="590.73" fp="1" fc="0" ts="31001" tq="14.76825" tp="40" tc="0" de="Investments"/>
+<item d="2010-02-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2010-02-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2010-02-15" fs="30000" fq="417" fp="1" fc="0" ts="20000" tq="417" tp="1" tc="0" de="Living expenses"/>
+<item d="2010-02-15" fs="30000" fq="237" fp="1" fc="0" ts="21000" tq="237" tp="1" tc="0" de="Food expenses"/>
+<item d="2010-02-15" fs="30000" fq="162" fp="1" fc="0" ts="22000" tq="162" tp="1" tc="0" de="Clothes"/>
+<item d="2010-02-15" fs="30000" fq="89" fp="1" fc="0" ts="23000" tq="89" tp="1" tc="0" de="Transportation"/>
+<item d="2010-02-15" fs="30000" fq="889.49" fp="1" fc="0" ts="31002" tq="88.949" tp="10" tc="0" de="Investments"/>
+<item d="2010-03-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2010-03-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2010-03-15" fs="30000" fq="454" fp="1" fc="0" ts="20000" tq="454" tp="1" tc="0" de="Living expenses"/>
+<item d="2010-03-15" fs="30000" fq="192" fp="1" fc="0" ts="21000" tq="192" tp="1" tc="0" de="Food expenses"/>
+<item d="2010-03-15" fs="30000" fq="213" fp="1" fc="0" ts="22000" tq="213" tp="1" tc="0" de="Clothes"/>
+<item d="2010-03-15" fs="30000" fq="107" fp="1" fc="0" ts="23000" tq="107" tp="1" tc="0" de="Transportation"/>
+<item d="2010-03-15" fs="30000" fq="801.22" fp="1" fc="0" ts="31001" tq="20.0305" tp="40" tc="0" de="Investments"/>
+<item d="2010-04-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2010-04-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2010-04-15" fs="30000" fq="521" fp="1" fc="0" ts="20000" tq="521" tp="1" tc="0" de="Living expenses"/>
+<item d="2010-04-15" fs="30000" fq="230" fp="1" fc="0" ts="21000" tq="230" tp="1" tc="0" de="Food expenses"/>
+<item d="2010-04-15" fs="30000" fq="230" fp="1" fc="0" ts="22000" tq="230" tp="1" tc="0" de="Clothes"/>
+<item d="2010-04-15" fs="30000" fq="118" fp="1" fc="0" ts="23000" tq="118" tp="1" tc="0" de="Transportation"/>
+<item d="2010-04-15" fs="30000" fq="659.6" fp="1" fc="0" ts="31001" tq="16.49" tp="40" tc="0" de="Investments"/>
+<item d="2010-04-15" fs="43000" fq="120000" fp="1" fc="0" ts="37000" tq="1" tp="120000" tc="0" de="Buy house"/>
+<item d="2010-05-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2010-05-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2010-05-15" fs="30000" fq="546" fp="1" fc="0" ts="20000" tq="546" tp="1" tc="0" de="Living expenses"/>
+<item d="2010-05-15" fs="30000" fq="239" fp="1" fc="0" ts="21000" tq="239" tp="1" tc="0" de="Food expenses"/>
+<item d="2010-05-15" fs="30000" fq="213" fp="1" fc="0" ts="22000" tq="213" tp="1" tc="0" de="Clothes"/>
+<item d="2010-05-15" fs="30000" fq="92" fp="1" fc="0" ts="23000" tq="92" tp="1" tc="0" de="Transportation"/>
+<item d="2010-05-15" fs="30000" fq="701.31" fp="1" fc="0" ts="31002" tq="70.131" tp="10" tc="0" de="Investments"/>
+<item d="2010-06-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2010-06-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2010-06-15" fs="30000" fq="450" fp="1" fc="0" ts="20000" tq="450" tp="1" tc="0" de="Living expenses"/>
+<item d="2010-06-15" fs="30000" fq="210" fp="1" fc="0" ts="21000" tq="210" tp="1" tc="0" de="Food expenses"/>
+<item d="2010-06-15" fs="30000" fq="206" fp="1" fc="0" ts="22000" tq="206" tp="1" tc="0" de="Clothes"/>
+<item d="2010-06-15" fs="30000" fq="108" fp="1" fc="0" ts="23000" tq="108" tp="1" tc="0" de="Transportation"/>
+<item d="2010-06-15" fs="30000" fq="817.71" fp="1" fc="0" ts="31002" tq="81.771" tp="10" tc="0" de="Investments"/>
+<item d="2010-07-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2010-07-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2010-07-15" fs="30000" fq="507" fp="1" fc="0" ts="20000" tq="507" tp="1" tc="0" de="Living expenses"/>
+<item d="2010-07-15" fs="30000" fq="199" fp="1" fc="0" ts="21000" tq="199" tp="1" tc="0" de="Food expenses"/>
+<item d="2010-07-15" fs="30000" fq="189" fp="1" fc="0" ts="22000" tq="189" tp="1" tc="0" de="Clothes"/>
+<item d="2010-07-15" fs="30000" fq="91" fp="1" fc="0" ts="23000" tq="91" tp="1" tc="0" de="Transportation"/>
+<item d="2010-07-15" fs="30000" fq="766.3" fp="1" fc="0" ts="31001" tq="19.1575" tp="40" tc="0" de="Investments"/>
+<item d="2010-08-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2010-08-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2010-08-15" fs="30000" fq="449" fp="1" fc="0" ts="20000" tq="449" tp="1" tc="0" de="Living expenses"/>
+<item d="2010-08-15" fs="30000" fq="197" fp="1" fc="0" ts="21000" tq="197" tp="1" tc="0" de="Food expenses"/>
+<item d="2010-08-15" fs="30000" fq="195" fp="1" fc="0" ts="22000" tq="195" tp="1" tc="0" de="Clothes"/>
+<item d="2010-08-15" fs="30000" fq="91" fp="1" fc="0" ts="23000" tq="91" tp="1" tc="0" de="Transportation"/>
+<item d="2010-08-15" fs="30000" fq="812.86" fp="1" fc="0" ts="31002" tq="81.286" tp="10" tc="0" de="Investments"/>
+<item d="2010-09-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2010-09-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2010-09-15" fs="30000" fq="444" fp="1" fc="0" ts="20000" tq="444" tp="1" tc="0" de="Living expenses"/>
+<item d="2010-09-15" fs="30000" fq="172" fp="1" fc="0" ts="21000" tq="172" tp="1" tc="0" de="Food expenses"/>
+<item d="2010-09-15" fs="30000" fq="230" fp="1" fc="0" ts="22000" tq="230" tp="1" tc="0" de="Clothes"/>
+<item d="2010-09-15" fs="30000" fq="107" fp="1" fc="0" ts="23000" tq="107" tp="1" tc="0" de="Transportation"/>
+<item d="2010-09-15" fs="30000" fq="857.48" fp="1" fc="0" ts="31002" tq="85.748" tp="10" tc="0" de="Investments"/>
+<item d="2010-10-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2010-10-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2010-10-15" fs="30000" fq="525" fp="1" fc="0" ts="20000" tq="525" tp="1" tc="0" de="Living expenses"/>
+<item d="2010-10-15" fs="30000" fq="229" fp="1" fc="0" ts="21000" tq="229" tp="1" tc="0" de="Food expenses"/>
+<item d="2010-10-15" fs="30000" fq="227" fp="1" fc="0" ts="22000" tq="227" tp="1" tc="0" de="Clothes"/>
+<item d="2010-10-15" fs="30000" fq="93" fp="1" fc="0" ts="23000" tq="93" tp="1" tc="0" de="Transportation"/>
+<item d="2010-10-15" fs="30000" fq="705.19" fp="1" fc="0" ts="31000" tq="3.06604347826087" tp="230" tc="0" de="Investments"/>
+<item d="2010-11-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2010-11-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2010-11-15" fs="30000" fq="425" fp="1" fc="0" ts="20000" tq="425" tp="1" tc="0" de="Living expenses"/>
+<item d="2010-11-15" fs="30000" fq="218" fp="1" fc="0" ts="21000" tq="218" tp="1" tc="0" de="Food expenses"/>
+<item d="2010-11-15" fs="30000" fq="219" fp="1" fc="0" ts="22000" tq="219" tp="1" tc="0" de="Clothes"/>
+<item d="2010-11-15" fs="30000" fq="82" fp="1" fc="0" ts="23000" tq="82" tp="1" tc="0" de="Transportation"/>
+<item d="2010-11-15" fs="30000" fq="820.62" fp="1" fc="0" ts="31001" tq="20.5155" tp="40" tc="0" de="Investments"/>
+<item d="2010-12-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2010-12-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2010-12-15" fs="30000" fq="555" fp="1" fc="0" ts="20000" tq="555" tp="1" tc="0" de="Living expenses"/>
+<item d="2010-12-15" fs="30000" fq="167" fp="1" fc="0" ts="21000" tq="167" tp="1" tc="0" de="Food expenses"/>
+<item d="2010-12-15" fs="30000" fq="236" fp="1" fc="0" ts="22000" tq="236" tp="1" tc="0" de="Clothes"/>
+<item d="2010-12-15" fs="30000" fq="107" fp="1" fc="0" ts="23000" tq="107" tp="1" tc="0" de="Transportation"/>
+<item d="2010-12-15" fs="30000" fq="737.2" fp="1" fc="0" ts="31000" tq="3.20521739130435" tp="230" tc="0" de="Investments"/>
+<item d="2007-01-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2007-01-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2007-01-15" fs="30000" fq="437" fp="1" fc="0" ts="20000" tq="437" tp="1" tc="0" de="Living expenses"/>
+<item d="2007-01-15" fs="30000" fq="192" fp="1" fc="0" ts="21000" tq="192" tp="1" tc="0" de="Food expenses"/>
+<item d="2007-01-15" fs="30000" fq="194" fp="1" fc="0" ts="22000" tq="194" tp="1" tc="0" de="Clothes"/>
+<item d="2007-01-15" fs="30000" fq="90" fp="1" fc="0" ts="23000" tq="90" tp="1" tc="0" de="Transportation"/>
+<item d="2007-01-15" fs="30000" fq="882.7" fp="1" fc="0" ts="31000" tq="3.83782608695652" tp="230" tc="0" de="Investments"/>
+<item d="2007-02-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2007-02-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2007-02-15" fs="30000" fq="526" fp="1" fc="0" ts="20000" tq="526" tp="1" tc="0" de="Living expenses"/>
+<item d="2007-02-15" fs="30000" fq="193" fp="1" fc="0" ts="21000" tq="193" tp="1" tc="0" de="Food expenses"/>
+<item d="2007-02-15" fs="30000" fq="230" fp="1" fc="0" ts="22000" tq="230" tp="1" tc="0" de="Clothes"/>
+<item d="2007-02-15" fs="30000" fq="83" fp="1" fc="0" ts="23000" tq="83" tp="1" tc="0" de="Transportation"/>
+<item d="2007-02-15" fs="30000" fq="779.88" fp="1" fc="0" ts="31002" tq="77.988" tp="10" tc="0" de="Investments"/>
+<item d="2007-03-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2007-03-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2007-03-15" fs="30000" fq="510" fp="1" fc="0" ts="20000" tq="510" tp="1" tc="0" de="Living expenses"/>
+<item d="2007-03-15" fs="30000" fq="161" fp="1" fc="0" ts="21000" tq="161" tp="1" tc="0" de="Food expenses"/>
+<item d="2007-03-15" fs="30000" fq="197" fp="1" fc="0" ts="22000" tq="197" tp="1" tc="0" de="Clothes"/>
+<item d="2007-03-15" fs="30000" fq="85" fp="1" fc="0" ts="23000" tq="85" tp="1" tc="0" de="Transportation"/>
+<item d="2007-03-15" fs="30000" fq="845.84" fp="1" fc="0" ts="32000" tq="9.39822222222222" tp="90" tc="0" de="Investments"/>
+<item d="2007-04-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2007-04-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2007-04-15" fs="30000" fq="465" fp="1" fc="0" ts="20000" tq="465" tp="1" tc="0" de="Living expenses"/>
+<item d="2007-04-15" fs="30000" fq="200" fp="1" fc="0" ts="21000" tq="200" tp="1" tc="0" de="Food expenses"/>
+<item d="2007-04-15" fs="30000" fq="225" fp="1" fc="0" ts="22000" tq="225" tp="1" tc="0" de="Clothes"/>
+<item d="2007-04-15" fs="30000" fq="82" fp="1" fc="0" ts="23000" tq="82" tp="1" tc="0" de="Transportation"/>
+<item d="2007-04-15" fs="30000" fq="812.86" fp="1" fc="0" ts="32000" tq="9.03177777777778" tp="90" tc="0" de="Investments"/>
+<item d="2007-05-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2007-05-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2007-05-15" fs="30000" fq="421" fp="1" fc="0" ts="20000" tq="421" tp="1" tc="0" de="Living expenses"/>
+<item d="2007-05-15" fs="30000" fq="200" fp="1" fc="0" ts="21000" tq="200" tp="1" tc="0" de="Food expenses"/>
+<item d="2007-05-15" fs="30000" fq="201" fp="1" fc="0" ts="22000" tq="201" tp="1" tc="0" de="Clothes"/>
+<item d="2007-05-15" fs="30000" fq="105" fp="1" fc="0" ts="23000" tq="105" tp="1" tc="0" de="Transportation"/>
+<item d="2007-05-15" fs="30000" fq="843.9" fp="1" fc="0" ts="31000" tq="3.66913043478261" tp="230" tc="0" de="Investments"/>
+<item d="2007-06-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2007-06-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2007-06-15" fs="30000" fq="455" fp="1" fc="0" ts="20000" tq="455" tp="1" tc="0" de="Living expenses"/>
+<item d="2007-06-15" fs="30000" fq="226" fp="1" fc="0" ts="21000" tq="226" tp="1" tc="0" de="Food expenses"/>
+<item d="2007-06-15" fs="30000" fq="188" fp="1" fc="0" ts="22000" tq="188" tp="1" tc="0" de="Clothes"/>
+<item d="2007-06-15" fs="30000" fq="113" fp="1" fc="0" ts="23000" tq="113" tp="1" tc="0" de="Transportation"/>
+<item d="2007-06-15" fs="30000" fq="812.86" fp="1" fc="0" ts="32000" tq="9.03177777777778" tp="90" tc="0" de="Investments"/>
+<item d="2007-07-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2007-07-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2007-07-15" fs="30000" fq="486" fp="1" fc="0" ts="20000" tq="486" tp="1" tc="0" de="Living expenses"/>
+<item d="2007-07-15" fs="30000" fq="197" fp="1" fc="0" ts="21000" tq="197" tp="1" tc="0" de="Food expenses"/>
+<item d="2007-07-15" fs="30000" fq="170" fp="1" fc="0" ts="22000" tq="170" tp="1" tc="0" de="Clothes"/>
+<item d="2007-07-15" fs="30000" fq="102" fp="1" fc="0" ts="23000" tq="102" tp="1" tc="0" de="Transportation"/>
+<item d="2007-07-15" fs="30000" fq="796.37" fp="1" fc="0" ts="31001" tq="19.90925" tp="40" tc="0" de="Investments"/>
+<item d="2007-08-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2007-08-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2007-08-15" fs="30000" fq="459" fp="1" fc="0" ts="20000" tq="459" tp="1" tc="0" de="Living expenses"/>
+<item d="2007-08-15" fs="30000" fq="224" fp="1" fc="0" ts="21000" tq="224" tp="1" tc="0" de="Food expenses"/>
+<item d="2007-08-15" fs="30000" fq="200" fp="1" fc="0" ts="22000" tq="200" tp="1" tc="0" de="Clothes"/>
+<item d="2007-08-15" fs="30000" fq="118" fp="1" fc="0" ts="23000" tq="118" tp="1" tc="0" de="Transportation"/>
+<item d="2007-08-15" fs="30000" fq="772.12" fp="1" fc="0" ts="31000" tq="3.35704347826087" tp="230" tc="0" de="Investments"/>
+<item d="2007-09-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2007-09-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2007-09-15" fs="30000" fq="413" fp="1" fc="0" ts="20000" tq="413" tp="1" tc="0" de="Living expenses"/>
+<item d="2007-09-15" fs="30000" fq="200" fp="1" fc="0" ts="21000" tq="200" tp="1" tc="0" de="Food expenses"/>
+<item d="2007-09-15" fs="30000" fq="185" fp="1" fc="0" ts="22000" tq="185" tp="1" tc="0" de="Clothes"/>
+<item d="2007-09-15" fs="30000" fq="113" fp="1" fc="0" ts="23000" tq="113" tp="1" tc="0" de="Transportation"/>
+<item d="2007-09-15" fs="30000" fq="861.36" fp="1" fc="0" ts="31001" tq="21.534" tp="40" tc="0" de="Investments"/>
+<item d="2007-10-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2007-10-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2007-10-15" fs="30000" fq="405" fp="1" fc="0" ts="20000" tq="405" tp="1" tc="0" de="Living expenses"/>
+<item d="2007-10-15" fs="30000" fq="176" fp="1" fc="0" ts="21000" tq="176" tp="1" tc="0" de="Food expenses"/>
+<item d="2007-10-15" fs="30000" fq="217" fp="1" fc="0" ts="22000" tq="217" tp="1" tc="0" de="Clothes"/>
+<item d="2007-10-15" fs="30000" fq="112" fp="1" fc="0" ts="23000" tq="112" tp="1" tc="0" de="Transportation"/>
+<item d="2007-10-15" fs="30000" fq="889.49" fp="1" fc="0" ts="32000" tq="9.88322222222222" tp="90" tc="0" de="Investments"/>
+<item d="2007-10-15" fs="43000" fq="20000" fp="1" fc="0" ts="38000" tq="1" tp="20000" tc="0" de="Buy car"/>
+<item d="2007-11-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2007-11-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2007-11-15" fs="30000" fq="445" fp="1" fc="0" ts="20000" tq="445" tp="1" tc="0" de="Living expenses"/>
+<item d="2007-11-15" fs="30000" fq="179" fp="1" fc="0" ts="21000" tq="179" tp="1" tc="0" de="Food expenses"/>
+<item d="2007-11-15" fs="30000" fq="180" fp="1" fc="0" ts="22000" tq="180" tp="1" tc="0" de="Clothes"/>
+<item d="2007-11-15" fs="30000" fq="106" fp="1" fc="0" ts="23000" tq="106" tp="1" tc="0" de="Transportation"/>
+<item d="2007-11-15" fs="30000" fq="882.7" fp="1" fc="0" ts="31002" tq="88.27" tp="10" tc="0" de="Investments"/>
+<item d="2007-12-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2007-12-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2007-12-15" fs="30000" fq="437" fp="1" fc="0" ts="20000" tq="437" tp="1" tc="0" de="Living expenses"/>
+<item d="2007-12-15" fs="30000" fq="166" fp="1" fc="0" ts="21000" tq="166" tp="1" tc="0" de="Food expenses"/>
+<item d="2007-12-15" fs="30000" fq="208" fp="1" fc="0" ts="22000" tq="208" tp="1" tc="0" de="Clothes"/>
+<item d="2007-12-15" fs="30000" fq="97" fp="1" fc="0" ts="23000" tq="97" tp="1" tc="0" de="Transportation"/>
+<item d="2007-12-15" fs="30000" fq="839.05" fp="1" fc="0" ts="31001" tq="20.97625" tp="40" tc="0" de="Investments"/>
+<item d="2008-01-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2008-01-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2008-01-15" fs="30000" fq="576" fp="1" fc="0" ts="20000" tq="576" tp="1" tc="0" de="Living expenses"/>
+<item d="2008-01-15" fs="30000" fq="163" fp="1" fc="0" ts="21000" tq="163" tp="1" tc="0" de="Food expenses"/>
+<item d="2008-01-15" fs="30000" fq="175" fp="1" fc="0" ts="22000" tq="175" tp="1" tc="0" de="Clothes"/>
+<item d="2008-01-15" fs="30000" fq="83" fp="1" fc="0" ts="23000" tq="83" tp="1" tc="0" de="Transportation"/>
+<item d="2008-01-15" fs="30000" fq="799.28" fp="1" fc="0" ts="31000" tq="3.47513043478261" tp="230" tc="0" de="Investments"/>
+<item d="2008-02-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2008-02-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2008-02-15" fs="30000" fq="583" fp="1" fc="0" ts="20000" tq="583" tp="1" tc="0" de="Living expenses"/>
+<item d="2008-02-15" fs="30000" fq="215" fp="1" fc="0" ts="21000" tq="215" tp="1" tc="0" de="Food expenses"/>
+<item d="2008-02-15" fs="30000" fq="228" fp="1" fc="0" ts="22000" tq="228" tp="1" tc="0" de="Clothes"/>
+<item d="2008-02-15" fs="30000" fq="92" fp="1" fc="0" ts="23000" tq="92" tp="1" tc="0" de="Transportation"/>
+<item d="2008-02-15" fs="30000" fq="684.82" fp="1" fc="0" ts="32000" tq="7.60911111111111" tp="90" tc="0" de="Investments"/>
+<item d="2008-03-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2008-03-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2008-03-15" fs="30000" fq="571" fp="1" fc="0" ts="20000" tq="571" tp="1" tc="0" de="Living expenses"/>
+<item d="2008-03-15" fs="30000" fq="199" fp="1" fc="0" ts="21000" tq="199" tp="1" tc="0" de="Food expenses"/>
+<item d="2008-03-15" fs="30000" fq="194" fp="1" fc="0" ts="22000" tq="194" tp="1" tc="0" de="Clothes"/>
+<item d="2008-03-15" fs="30000" fq="87" fp="1" fc="0" ts="23000" tq="87" tp="1" tc="0" de="Transportation"/>
+<item d="2008-03-15" fs="30000" fq="700.34" fp="1" fc="0" ts="31001" tq="17.5085" tp="40" tc="0" de="Investments"/>
+<item d="2008-04-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2008-04-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2008-04-15" fs="30000" fq="483" fp="1" fc="0" ts="20000" tq="483" tp="1" tc="0" de="Living expenses"/>
+<item d="2008-04-15" fs="30000" fq="238" fp="1" fc="0" ts="21000" tq="238" tp="1" tc="0" de="Food expenses"/>
+<item d="2008-04-15" fs="30000" fq="207" fp="1" fc="0" ts="22000" tq="207" tp="1" tc="0" de="Clothes"/>
+<item d="2008-04-15" fs="30000" fq="95" fp="1" fc="0" ts="23000" tq="95" tp="1" tc="0" de="Transportation"/>
+<item d="2008-04-15" fs="30000" fq="779.88" fp="1" fc="0" ts="31002" tq="77.988" tp="10" tc="0" de="Investments"/>
+<item d="2008-05-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2008-05-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2008-05-15" fs="30000" fq="419" fp="1" fc="0" ts="20000" tq="419" tp="1" tc="0" de="Living expenses"/>
+<item d="2008-05-15" fs="30000" fq="207" fp="1" fc="0" ts="21000" tq="207" tp="1" tc="0" de="Food expenses"/>
+<item d="2008-05-15" fs="30000" fq="163" fp="1" fc="0" ts="22000" tq="163" tp="1" tc="0" de="Clothes"/>
+<item d="2008-05-15" fs="30000" fq="87" fp="1" fc="0" ts="23000" tq="87" tp="1" tc="0" de="Transportation"/>
+<item d="2008-05-15" fs="30000" fq="882.7" fp="1" fc="0" ts="31002" tq="88.27" tp="10" tc="0" de="Investments"/>
+<item d="2008-06-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2008-06-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2008-06-15" fs="30000" fq="428" fp="1" fc="0" ts="20000" tq="428" tp="1" tc="0" de="Living expenses"/>
+<item d="2008-06-15" fs="30000" fq="225" fp="1" fc="0" ts="21000" tq="225" tp="1" tc="0" de="Food expenses"/>
+<item d="2008-06-15" fs="30000" fq="180" fp="1" fc="0" ts="22000" tq="180" tp="1" tc="0" de="Clothes"/>
+<item d="2008-06-15" fs="30000" fq="112" fp="1" fc="0" ts="23000" tq="112" tp="1" tc="0" de="Transportation"/>
+<item d="2008-06-15" fs="30000" fq="843.9" fp="1" fc="0" ts="32000" tq="9.37666666666667" tp="90" tc="0" de="Investments"/>
+<item d="2008-07-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2008-07-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2008-07-15" fs="30000" fq="532" fp="1" fc="0" ts="20000" tq="532" tp="1" tc="0" de="Living expenses"/>
+<item d="2008-07-15" fs="30000" fq="177" fp="1" fc="0" ts="21000" tq="177" tp="1" tc="0" de="Food expenses"/>
+<item d="2008-07-15" fs="30000" fq="233" fp="1" fc="0" ts="22000" tq="233" tp="1" tc="0" de="Clothes"/>
+<item d="2008-07-15" fs="30000" fq="89" fp="1" fc="0" ts="23000" tq="89" tp="1" tc="0" de="Transportation"/>
+<item d="2008-07-15" fs="30000" fq="711.01" fp="1" fc="0" ts="32000" tq="7.90011111111111" tp="90" tc="0" de="Investments"/>
+<item d="2008-08-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2008-08-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2008-08-15" fs="30000" fq="411" fp="1" fc="0" ts="20000" tq="411" tp="1" tc="0" de="Living expenses"/>
+<item d="2008-08-15" fs="30000" fq="212" fp="1" fc="0" ts="21000" tq="212" tp="1" tc="0" de="Food expenses"/>
+<item d="2008-08-15" fs="30000" fq="219" fp="1" fc="0" ts="22000" tq="219" tp="1" tc="0" de="Clothes"/>
+<item d="2008-08-15" fs="30000" fq="86" fp="1" fc="0" ts="23000" tq="86" tp="1" tc="0" de="Transportation"/>
+<item d="2008-08-15" fs="30000" fq="818.68" fp="1" fc="0" ts="31001" tq="20.467" tp="40" tc="0" de="Investments"/>
+<item d="2008-09-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2008-09-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2008-09-15" fs="30000" fq="427" fp="1" fc="0" ts="20000" tq="427" tp="1" tc="0" de="Living expenses"/>
+<item d="2008-09-15" fs="30000" fq="208" fp="1" fc="0" ts="21000" tq="208" tp="1" tc="0" de="Food expenses"/>
+<item d="2008-09-15" fs="30000" fq="200" fp="1" fc="0" ts="22000" tq="200" tp="1" tc="0" de="Clothes"/>
+<item d="2008-09-15" fs="30000" fq="119" fp="1" fc="0" ts="23000" tq="119" tp="1" tc="0" de="Transportation"/>
+<item d="2008-09-15" fs="30000" fq="846.81" fp="1" fc="0" ts="32000" tq="9.409" tp="90" tc="0" de="Investments"/>
+<item d="2008-10-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2008-10-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2008-10-15" fs="30000" fq="532" fp="1" fc="0" ts="20000" tq="532" tp="1" tc="0" de="Living expenses"/>
+<item d="2008-10-15" fs="30000" fq="227" fp="1" fc="0" ts="21000" tq="227" tp="1" tc="0" de="Food expenses"/>
+<item d="2008-10-15" fs="30000" fq="180" fp="1" fc="0" ts="22000" tq="180" tp="1" tc="0" de="Clothes"/>
+<item d="2008-10-15" fs="30000" fq="111" fp="1" fc="0" ts="23000" tq="111" tp="1" tc="0" de="Transportation"/>
+<item d="2008-10-15" fs="30000" fq="721.68" fp="1" fc="0" ts="32000" tq="8.01866666666667" tp="90" tc="0" de="Investments"/>
+<item d="2008-11-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2008-11-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2008-11-15" fs="30000" fq="501" fp="1" fc="0" ts="20000" tq="501" tp="1" tc="0" de="Living expenses"/>
+<item d="2008-11-15" fs="30000" fq="164" fp="1" fc="0" ts="21000" tq="164" tp="1" tc="0" de="Food expenses"/>
+<item d="2008-11-15" fs="30000" fq="225" fp="1" fc="0" ts="22000" tq="225" tp="1" tc="0" de="Clothes"/>
+<item d="2008-11-15" fs="30000" fq="100" fp="1" fc="0" ts="23000" tq="100" tp="1" tc="0" de="Transportation"/>
+<item d="2008-11-15" fs="30000" fq="767.27" fp="1" fc="0" ts="31001" tq="19.18175" tp="40" tc="0" de="Investments"/>
+<item d="2008-12-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2008-12-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2008-12-15" fs="30000" fq="598" fp="1" fc="0" ts="20000" tq="598" tp="1" tc="0" de="Living expenses"/>
+<item d="2008-12-15" fs="30000" fq="187" fp="1" fc="0" ts="21000" tq="187" tp="1" tc="0" de="Food expenses"/>
+<item d="2008-12-15" fs="30000" fq="164" fp="1" fc="0" ts="22000" tq="164" tp="1" tc="0" de="Clothes"/>
+<item d="2008-12-15" fs="30000" fq="92" fp="1" fc="0" ts="23000" tq="92" tp="1" tc="0" de="Transportation"/>
+<item d="2008-12-15" fs="30000" fq="732.35" fp="1" fc="0" ts="31001" tq="18.30875" tp="40" tc="0" de="Investments"/>
+<item d="2009-01-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2009-01-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2009-01-15" fs="30000" fq="459" fp="1" fc="0" ts="20000" tq="459" tp="1" tc="0" de="Living expenses"/>
+<item d="2009-01-15" fs="30000" fq="228" fp="1" fc="0" ts="21000" tq="228" tp="1" tc="0" de="Food expenses"/>
+<item d="2009-01-15" fs="30000" fq="213" fp="1" fc="0" ts="22000" tq="213" tp="1" tc="0" de="Clothes"/>
+<item d="2009-01-15" fs="30000" fq="100" fp="1" fc="0" ts="23000" tq="100" tp="1" tc="0" de="Transportation"/>
+<item d="2009-01-15" fs="30000" fq="801.22" fp="1" fc="0" ts="31000" tq="3.4835652173913" tp="230" tc="0" de="Investments"/>
+<item d="2009-02-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2009-02-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2009-02-15" fs="30000" fq="500" fp="1" fc="0" ts="20000" tq="500" tp="1" tc="0" de="Living expenses"/>
+<item d="2009-02-15" fs="30000" fq="212" fp="1" fc="0" ts="21000" tq="212" tp="1" tc="0" de="Food expenses"/>
+<item d="2009-02-15" fs="30000" fq="204" fp="1" fc="0" ts="22000" tq="204" tp="1" tc="0" de="Clothes"/>
+<item d="2009-02-15" fs="30000" fq="99" fp="1" fc="0" ts="23000" tq="99" tp="1" tc="0" de="Transportation"/>
+<item d="2009-02-15" fs="30000" fq="739.14" fp="1" fc="0" ts="32000" tq="8.21266666666667" tp="90" tc="0" de="Investments"/>
+<item d="2009-03-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2009-03-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2009-03-15" fs="30000" fq="403" fp="1" fc="0" ts="20000" tq="403" tp="1" tc="0" de="Living expenses"/>
+<item d="2009-03-15" fs="30000" fq="230" fp="1" fc="0" ts="21000" tq="230" tp="1" tc="0" de="Food expenses"/>
+<item d="2009-03-15" fs="30000" fq="184" fp="1" fc="0" ts="22000" tq="184" tp="1" tc="0" de="Clothes"/>
+<item d="2009-03-15" fs="30000" fq="110" fp="1" fc="0" ts="23000" tq="110" tp="1" tc="0" de="Transportation"/>
+<item d="2009-03-15" fs="30000" fq="883.67" fp="1" fc="0" ts="31000" tq="3.84204347826087" tp="230" tc="0" de="Investments"/>
+<item d="2009-04-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2009-04-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2009-04-15" fs="30000" fq="461" fp="1" fc="0" ts="20000" tq="461" tp="1" tc="0" de="Living expenses"/>
+<item d="2009-04-15" fs="30000" fq="225" fp="1" fc="0" ts="21000" tq="225" tp="1" tc="0" de="Food expenses"/>
+<item d="2009-04-15" fs="30000" fq="205" fp="1" fc="0" ts="22000" tq="205" tp="1" tc="0" de="Clothes"/>
+<item d="2009-04-15" fs="30000" fq="113" fp="1" fc="0" ts="23000" tq="113" tp="1" tc="0" de="Transportation"/>
+<item d="2009-04-15" fs="30000" fq="762.42" fp="1" fc="0" ts="31000" tq="3.31486956521739" tp="230" tc="0" de="Investments"/>
+<item d="2009-05-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2009-05-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2009-05-15" fs="30000" fq="407" fp="1" fc="0" ts="20000" tq="407" tp="1" tc="0" de="Living expenses"/>
+<item d="2009-05-15" fs="30000" fq="164" fp="1" fc="0" ts="21000" tq="164" tp="1" tc="0" de="Food expenses"/>
+<item d="2009-05-15" fs="30000" fq="208" fp="1" fc="0" ts="22000" tq="208" tp="1" tc="0" de="Clothes"/>
+<item d="2009-05-15" fs="30000" fq="88" fp="1" fc="0" ts="23000" tq="88" tp="1" tc="0" de="Transportation"/>
+<item d="2009-05-15" fs="30000" fq="913.74" fp="1" fc="0" ts="32000" tq="10.1526666666667" tp="90" tc="0" de="Investments"/>
+<item d="2009-06-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2009-06-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2009-06-15" fs="30000" fq="462" fp="1" fc="0" ts="20000" tq="462" tp="1" tc="0" de="Living expenses"/>
+<item d="2009-06-15" fs="30000" fq="194" fp="1" fc="0" ts="21000" tq="194" tp="1" tc="0" de="Food expenses"/>
+<item d="2009-06-15" fs="30000" fq="163" fp="1" fc="0" ts="22000" tq="163" tp="1" tc="0" de="Clothes"/>
+<item d="2009-06-15" fs="30000" fq="115" fp="1" fc="0" ts="23000" tq="115" tp="1" tc="0" de="Transportation"/>
+<item d="2009-06-15" fs="30000" fq="874.94" fp="1" fc="0" ts="31000" tq="3.80408695652174" tp="230" tc="0" de="Investments"/>
+<item d="2009-07-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2009-07-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2009-07-15" fs="30000" fq="492" fp="1" fc="0" ts="20000" tq="492" tp="1" tc="0" de="Living expenses"/>
+<item d="2009-07-15" fs="30000" fq="166" fp="1" fc="0" ts="21000" tq="166" tp="1" tc="0" de="Food expenses"/>
+<item d="2009-07-15" fs="30000" fq="205" fp="1" fc="0" ts="22000" tq="205" tp="1" tc="0" de="Clothes"/>
+<item d="2009-07-15" fs="30000" fq="81" fp="1" fc="0" ts="23000" tq="81" tp="1" tc="0" de="Transportation"/>
+<item d="2009-07-15" fs="30000" fq="859.42" fp="1" fc="0" ts="32000" tq="9.54911111111111" tp="90" tc="0" de="Investments"/>
+<item d="2009-08-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2009-08-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2009-08-15" fs="30000" fq="454" fp="1" fc="0" ts="20000" tq="454" tp="1" tc="0" de="Living expenses"/>
+<item d="2009-08-15" fs="30000" fq="217" fp="1" fc="0" ts="21000" tq="217" tp="1" tc="0" de="Food expenses"/>
+<item d="2009-08-15" fs="30000" fq="226" fp="1" fc="0" ts="22000" tq="226" tp="1" tc="0" de="Clothes"/>
+<item d="2009-08-15" fs="30000" fq="86" fp="1" fc="0" ts="23000" tq="86" tp="1" tc="0" de="Transportation"/>
+<item d="2009-08-15" fs="30000" fq="805.1" fp="1" fc="0" ts="31002" tq="80.51" tp="10" tc="0" de="Investments"/>
+<item d="2009-09-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2009-09-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2009-09-15" fs="30000" fq="580" fp="1" fc="0" ts="20000" tq="580" tp="1" tc="0" de="Living expenses"/>
+<item d="2009-09-15" fs="30000" fq="210" fp="1" fc="0" ts="21000" tq="210" tp="1" tc="0" de="Food expenses"/>
+<item d="2009-09-15" fs="30000" fq="193" fp="1" fc="0" ts="22000" tq="193" tp="1" tc="0" de="Clothes"/>
+<item d="2009-09-15" fs="30000" fq="111" fp="1" fc="0" ts="23000" tq="111" tp="1" tc="0" de="Transportation"/>
+<item d="2009-09-15" fs="30000" fq="699.37" fp="1" fc="0" ts="31002" tq="69.937" tp="10" tc="0" de="Investments"/>
+<item d="2009-10-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2009-10-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2009-10-15" fs="30000" fq="585" fp="1" fc="0" ts="20000" tq="585" tp="1" tc="0" de="Living expenses"/>
+<item d="2009-10-15" fs="30000" fq="183" fp="1" fc="0" ts="21000" tq="183" tp="1" tc="0" de="Food expenses"/>
+<item d="2009-10-15" fs="30000" fq="208" fp="1" fc="0" ts="22000" tq="208" tp="1" tc="0" de="Clothes"/>
+<item d="2009-10-15" fs="30000" fq="113" fp="1" fc="0" ts="23000" tq="113" tp="1" tc="0" de="Transportation"/>
+<item d="2009-10-15" fs="30000" fq="666.39" fp="1" fc="0" ts="31002" tq="66.639" tp="10" tc="0" de="Investments"/>
+<item d="2009-11-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2009-11-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2009-11-15" fs="30000" fq="467" fp="1" fc="0" ts="20000" tq="467" tp="1" tc="0" de="Living expenses"/>
+<item d="2009-11-15" fs="30000" fq="172" fp="1" fc="0" ts="21000" tq="172" tp="1" tc="0" de="Food expenses"/>
+<item d="2009-11-15" fs="30000" fq="217" fp="1" fc="0" ts="22000" tq="217" tp="1" tc="0" de="Clothes"/>
+<item d="2009-11-15" fs="30000" fq="114" fp="1" fc="0" ts="23000" tq="114" tp="1" tc="0" de="Transportation"/>
+<item d="2009-11-15" fs="30000" fq="775.03" fp="1" fc="0" ts="31000" tq="3.36969565217391" tp="230" tc="0" de="Investments"/>
+<item d="2009-12-15" fs="10000" fq="2000" fp="1" fc="0" ts="30000" tq="2000" tp="1" tc="0" de="Salary"/>
+<item d="2009-12-15" fs="30000" fq="0" fp="1" fc="0" ts="30001" tq="0" tp="1" tc="0" de="Savings"/>
+<item d="2009-12-15" fs="30000" fq="531" fp="1" fc="0" ts="20000" tq="531" tp="1" tc="0" de="Living expenses"/>
+<item d="2009-12-15" fs="30000" fq="204" fp="1" fc="0" ts="21000" tq="204" tp="1" tc="0" de="Food expenses"/>
+<item d="2009-12-15" fs="30000" fq="192" fp="1" fc="0" ts="22000" tq="192" tp="1" tc="0" de="Clothes"/>
+<item d="2009-12-15" fs="30000" fq="85" fp="1" fc="0" ts="23000" tq="85" tp="1" tc="0" de="Transportation"/>
+<item d="2009-12-15" fs="30000" fq="793.46" fp="1" fc="0" ts="31002" tq="79.346" tp="10" tc="0" de="Investments"/>
+</transactions>

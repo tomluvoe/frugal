@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<accounts>
+<account num="10000" c="EUR" de="Salary"/>
+<account num="30000" c="EUR" de="Salary Account"/>
+<account num="30001" c="EUR" de="Savings Account"/>
+<account num="20000" c="EUR" de="Living costs"/>
+<account num="21000" c="EUR" de="Food and groceries"/>
+<account num="22000" c="EUR" de="Clothes"/>
+<account num="23000" c="EUR" de="Transportation"/>
+<account num="25000" c="EUR" de="Entertainment"/>
+<account num="31000" c="EUR" de="VOW.DE"/>
+<account num="31001" c="EUR" de="DBK.DE"/>
+<account num="31002" c="EUR" de="LHA.DE"/>
+<account num="32000" c="USD" de="IVV"/>
+<account num="37000" c="EUR" de="House"/>
+<account num="38000" c="EUR" de="Car"/>
+<account num="43000" c="EUR" de="Bank loan"/>
+</accounts>

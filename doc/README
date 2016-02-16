@@ -1,0 +1,221 @@
+FRUGAL
+******
+Copyright (c) 2006-2010 Thomas Larsson.
+This program is distributed under the terms of the GNU General Public License.
+
+Frugal is a simple yet powerful personal finance and stock portfolio management
+application. It provides quick on-line stock quote and currency rate updates 
+and easy to understand graphical and textual views of your financial situation. 
+
+More information available at http://frugal.sourceforge.net
+
+Requirements
+************
+Frugal runs on any operating system supporting Python (including Windows,
+Linux and MacOS).
+
+Installation instructions
+*************************
+
+ALL PLATFORMS
+
+Download the latest version of Frugal from
+http://sourceforge.net/project/showfiles.php?group_id=232217 .
+
+* Click on the latest release "0.XX", then download either the .zip or .tar.gz
+  archive.
+* Unzip the archive to a new folder.
+* Follow the instructions below for Linux or Windows. (Mac users should follow
+  similar steps - see Linux)
+
+LINUX
+
+Frugal has successfully been tested on Ubuntu (8.10 and 9.04) with the 
+following additional packages installed. Install necessary packages by opening 
+System->Administration->Synaptic Package Manager and selecting;
+* python-numpy
+* python-wxversion
+* python-matplotlib
+
+WINDOWS
+
+For Windows there are two ways to go, one with few clicks but more data to
+download - or more clicks but less data. For the latter, please see
+instructions for OTHER PLATFORMS below. Python(x,y) requires a download of
+about 400MB, but you may remove the files after installation (which requires
+less).
+
+Download and install Python(x,y) xyweb from http://www.pythonxy.com . 
+Python(x,y) bundles Python and all required packages into a one Windows 
+installation file. Follow the instructions in Frugal's User's Guide (available 
+from http://frugal.sourceforge.net/) in order to save hard-drive space by 
+installing only those packages of Python(x,y) that are required to run Frugal.
+* Download and install xyweb-[version].exe file from 
+  http://www.pythonxy.com
+ 1. Start xyweb and choose Full Edition, then click Download (about 400MB)
+ 2. Click Yes when asked if the installer should start
+ 3. In the "Choose Components" window, select Minimum as the "type of install" 
+    and then expand the "Python" branch in the "optional components window" 
+    and select components "wxPython", "NumPy" and "Matplotlib" (package 
+    "Nose" will be automatically selected when "NumPy" in selected)
+
+OTHER PLATFORMS
+
+Please download and install the following software packages. More detailed 
+information of how to install the packages, please refer to the following web 
+sites.
+
+* Python (http://www.python.org/)
+* Numpy (http://www.numpy.org/)
+* wxPython (http://www.wxpython.org/)
+* Matplotlib (http://matplotlib.sourceforge.net/) 
+
+Getting started
+***************
+
+LINUX
+
+From the frugal root directory (by default called 'frugal'), run;
+$ python src/frugal.py
+
+WINDOWS
+
+Double-click on frugal.py in the frugal/src directory.
+
+GENERAL USAGE
+
+Please refer to the User's Guide available in the About menu.
+
+To start a new project, from the File menu, select "New project...". Create a
+new directory, select that directory and click Open. Enter your currency, 
+preferable its three letter abbreviation, e.g. EUR, USD or SEK. 
+Your new project files will automatically be created in the selected folder.
+
+To open the demo project, from the File menu, select "Open project...".
+Find the 'demo' directory and click Open.
+
+* To save your changes, select File and "Save project". 
+* Choose view-mode in the View menu.
+* If you change or add data, you can re-calculate the data from the Project 
+  menu.
+* To open a new project when a project is already active, you need to close 
+  and then restart Frugal.
+
+A user's guide is available on the project page 
+http://frugal.sourceforge.net 
+
+Change log
+**********
+0.22
++ added stock split function to the stock portfolio
++ added copy and adjustment of stock quotes at split
+
+0.21
++ select currency from a list of supported currencies (new project)
++ function to add a new currency to a project
++ added handling for window close event
++ changed progress bar information
++ updated demo project for 2010
+
+0.20
++ Added "Initial balance" to "Add share" plug-in to simplify creating a new
+  portfolio
+
+0.19
++ added Morningstar support automatic mutual fund prices
++ automatic selection of Morningstar (ISIN) or Yahoo! (Ticker) or ECB (currency)
+  sites for current price download
++ line plots instead of bar plots for balance and stock assets in history views
+
+0.18
++ income sheet profit history list
++ balance sheet equity history list
++ balance sheet equity history plots
++ updated the stock portfolio list with currency and ratio
+
+0.17
++ improved yearly bar plot of income and assets
++ balance sheet plot shows only asset groups, stock portfolio detailed asset plot
++ stock portfolio plug-in plots and graphs
++ bugfix: automatic update search message in window title
+
+0.16
++ new plug-in: stock portfolio (portfolio overview and transaction history)
++ sorted detailed view by group in balance sheet
++ sorted detailed view by group in income statement
+
+0.15
++ improved income statement and balance sheet
++ about menu in GUI has a direct link to the user's guide
+
+0.14
++ download online share/fund quotes from Yahoo!
++ download share names from Yahoo! and show instead of stock symbols
++ download online currency rates from the ECB
++ new demo project to show automatic stock quotes and currency rate updates
++ improved the add data plug-in
++ imporved the add transactions plug-in
++ show every asset in detailed chart instead of groups (balance plug-in)
++ display the project's base currency
++ misc changes
+
+0.13
++ simple user friendly add transactions (new plug-in)
++ added opening balance to new account (updated add plug-in)
++ fixed small bug in x-axis plots (basic plug-in)
++ fixed bug in create new project functionality
++ added option to choose currency for new project
+
+0.12
++ fixed bug in add account (only possible to add an integer price)
++ fixed bug in show graphs (visible using the demo project)
+
+0.11
++ automatic program update search
++ fixed Windows bug in GUI (split window parent) 
++ updated x-axis in bar plots and bugfix empty set
++ removed line plots as they fail in Windows
+
+0.10
++ matplotlib support (missing in 0.9) for plugins
++ bar and line plots for historical graphs 
+
+0.9
++ multi-threading support
++ new add functions
++ plug-in concept to simplify development
++ progress bars
++ improved update check
+
+0.8
++ fixed income statement calculation bug
+
+0.7
++ historical data can be viewed at monthly and yearly interval
++ user's guide released as draft, available on project page
+
+0.6
++ fixed check for update bug
+
+0.5
++ add accounts
+
+0.4
++ new project function
+
+0.3
++ interactive share selection in add function
++ online check for new releases
++ modified data check on exit
+
+0.2
++ add transactions
++ add share quotes
++ add currency prices
+
+0.1
++ initial alpha release
++ plotting and listing financial data
++ view current and historical data
++ view and change raw data
+
