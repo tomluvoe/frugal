@@ -22,6 +22,7 @@ import sys
 import re
 import socket
 import urllib2
+import json
 from datetime import date,datetime,timedelta
 
 from numpy import *
@@ -44,7 +45,7 @@ class datacoll_c:
 		self.aattr = ['num','c','de']
 		self.cfile = 'currencies.xml'
 		self.ctags = ['currencies','price']
-		self.cattr = ['d','c','p'] 
+		self.cattr = ['d','c','p']
 		self.qfile = 'quotes.xml'
 		self.qtags = ['quotes','quote']
 		self.qattr = ['d','a','p']
@@ -129,7 +130,7 @@ class datacoll_c:
 		if not pd == False:
 			pd.Update(95,'Opened all files OK.')
 		return self.dicttomat(pd)
- 
+
 	def dicttomat(self,pd=False):
 	# transform to matrices without description; transactions, currencies, accounts
 		if not pd == False:
@@ -193,19 +194,19 @@ class datacoll_c:
 	def calccmatrix(self):
 	# create a currency matrix row being month vs currencies and prices
 		# depends on calcamatrix
-		cols = self.admatrix[:,0].size	
+		cols = self.admatrix[:,0].size
 		mat = zeros((1,cols))
 		for d in self.datematrix[:,0]:
 			row = zeros((1,cols))
 			for i,c in enumerate(self.cdlist):
 				r = where((self.cdmatrix[:,1] == i) & (self.cdmatrix[:,0] <= d*100+31))
 				if not r[0].size == 0:
-					row = row + self.cdmatrix[r[0][-1],2] * self.ccamatrix[i] 
+					row = row + self.cdmatrix[r[0][-1],2] * self.ccamatrix[i]
 			mat = vstack((mat,row))
 		return mat[1:,:]
 
 	def calcdatematrix(self):
-	# create month matrix 
+	# create month matrix
 		sd = self.tcmatrix[0][0]
 		sd = int(sd/100)
 		sy = int(sd/100)
@@ -223,7 +224,7 @@ class datacoll_c:
 				sm = 1
 				sy = sy + 1
 		return mat[1:,:]
-	
+
 
 	def calcamatrix(self):
 	# create the ones/zeros matrix to calc accumulated result/month
@@ -231,7 +232,7 @@ class datacoll_c:
 		cmat = zeros((1,asize))
 		for d in self.datematrix[:,0]:
 			row = array(where(self.tcmatrix[:,0] <= d*100+31,1,0))
-			cmat = vstack((cmat,row)) 
+			cmat = vstack((cmat,row))
 		return cmat[1:,:]
 
 	def calcdmatrix(self,rmatrix):
@@ -334,7 +335,7 @@ class datacoll_c:
 		return dot(amatrix,gvec)
 
 	def getdassets(self,group,yfrom=0,yto=0,diff=0,mini=0,all=0,basecurrency=1,totsum=1,yoy=0,apps=0):
-	# get detailed asset list from year to year (diff/no diff) of one group by name (mini=1 name only, =2 name and aid) yoy = quote diff 3,6,12 mo apps = avg price per sh, 
+	# get detailed asset list from year to year (diff/no diff) of one group by name (mini=1 name only, =2 name and aid) yoy = quote diff 3,6,12 mo apps = avg price per sh,
 		cgvec = self.getgroupvector(group)
 		ds = self.datautils.calcdates(yfrom,yto)
 		if basecurrency == 1:
@@ -407,7 +408,7 @@ class datacoll_c:
 		values = []
 		for l in labels:
 			values.append(self.datautils.rstr(self.getgroupsum(l,yfrom,yto,diff),2))
-		return values	
+		return values
 
 	def gethglvalues(self,labels,diff=0):
 	# get historical sums for a list of groups (labels) with diff / no diff
@@ -799,7 +800,85 @@ class datacoll_c:
 	# get latest quote
 		if self.datautils.ismorn(symbol):
 			return self.getmorningstarquote(symbol)
+		elif self.datautils.isbloom(symbol):
+			return self.getbloombergquote(symbol)
 		return self.getyahooquote(symbol)
+
+	def getbloombergquote(self,symbol):
+		blmlist = self.getbloombergquotes(pd=False,shares=[symbol])
+		if not len(blmlist) == 0:
+			return blmlist[0][1]
+		return '0.0'
+
+
+	def getbloombergquotes(self,pd=False,shares=[]):
+	# get latest share quotes of list shares from bloomberg
+		groups = self.getgrouplabels(self.GROUPS[2][0])
+		shareurl = ''
+		shareids = []
+		sharenams = []
+		bloomshares = []
+		if not pd == False:
+			pd.Update(10,'Preparing shares..')
+		if shares == []:
+			autoupd = True
+			for g in groups:
+				assets = self.getdassets(g,mini=2)
+				for a in assets:
+					shares.append(a[0])
+					shareids.append(a[1])
+		else:
+			autoupd = False
+		shtmp = []
+		if autoupd == True:
+			for i,s in enumerate(shares):
+				if not pd == False:
+					pd.Update(10)
+				if not self.datautils.isbloom(s):
+					continue
+				shtmp.append([s,shareids[i]])
+		else:
+			shtmp = [shares]
+		socket.setdefaulttimeout(10)
+		delta = 0
+		if len(shtmp) > 0:
+			delta = 75/len(shtmp)
+		for i,symbol in enumerate(shtmp):
+			url = "https://www.bloomberg.com/markets/api/quote-page/%s" % symbol[0]
+			print url
+			try:
+				if not pd == False:
+					pd.Update(delta*i+20,'Downloading share prices..')
+				fd = urllib2.urlopen(url)
+				bloom = fd.read()
+				fd.close()
+				read_json = json.loads(bloom)
+				nav = str(read_json['basicQuote']['price'])
+				nam = str(read_json['basicQuote']['name'])
+				dat = str(read_json['basicQuote']['priceDate'])
+				print symbol,nav,nam,dat
+				# add quote to project
+				sharenams.append([symbol[0],nam])
+				mosdate = datetime.strptime(dat,'%m/%d/%Y')
+				if autoupd == True:
+					ditm = {}
+					ditm['d'] = mosdate.strftime('%Y%m%d')
+					ditm['p'] = nav
+					ditm['a'] = symbol[1]
+					if not ditm['a'] == 0:
+						self.qdict.addtodict(ditm)
+				bloomshares.append([symbol[0],nav,'9:00PM',mosdate.strftime('%m/%d/%Y'),nam])
+			except IOError:
+				pass
+		if autoupd == True:
+			if self.anams == []:
+				self.anams = sharenams
+			else:
+				for sn in sharenams:
+					self.anams.append(sn)
+		if not pd == False:
+			pd.Update(95,'Done')
+		return bloomshares
 
 	def getyahooquote(self,symbol):
 	# get latest share quote from yahoo finance
@@ -857,7 +936,7 @@ class datacoll_c:
 		for i,s in enumerate(shares):
 			if not pd == False:
 				pd.Update(10)
-			if re.search(' ',s) or self.datautils.isisin(s) or self.datautils.ismorn(s):
+			if re.search(' ',s) or self.datautils.isisin(s) or self.datautils.ismorn(s) or self.datautils.isbloom(s):
 				continue
 			if autoupd == True:
 				shtmp.append(shareids[i])
@@ -1166,6 +1245,7 @@ class datacoll_c:
 		self.anams = []
 		yhoquotes = self.getyahooquotes(pd)
 		morningquotes = self.getmorningstarquotes(pd)
+		bloombergquotes = self.getbloombergquotes(pd)
 		ecbrates = self.getecbrates(pd)
 		#sebquotes = self.getsebquotes(pd)
 		return True

@@ -126,6 +126,12 @@ class datautils_c:
 			return False
 		return True
 
+	def isbloom(self,s):
+		p = re.compile('\A[A-Z0-9]+\:[A-Z]{2}\Z')
+		if p.match(s) == None:
+			return False
+		return True
+
 	def ismorn(self,s):
 		p = re.compile('\A[A-Z0-9]{10}\Z')
 		if p.match(s) == None:
@@ -166,4 +172,3 @@ class datautils_c:
 			mm = 11
 			result.append(date(yy,mm,fixdate))
 		return result
-
