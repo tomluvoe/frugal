@@ -948,6 +948,7 @@ class datacoll_c:
 			return yhoshares
 		shareids = shtmp
 		yahoourl = 'http://finance.yahoo.com/d/quotes.csv?s=%s&f=sl1d1t1n' % shareurl
+		print yahoourl
 		socket.setdefaulttimeout(10)
 		if not pd == False:
 			pd.Update(10,'Connecting to the internet..')
@@ -980,8 +981,8 @@ class datacoll_c:
 					ditm['d'] = yhodate.strftime('%Y%m%d')
 					ditm['p'] = sh[1]
 					ditm['a'] = shareids[i]
-					print ditm
 					if not ditm['a'] == 0 and self.accname(shareids[i]) == sh[0]:
+						print [sh[0],ditm['a']], ditm['p'], sh[4], sh[2]
 						self.qdict.addtodict(ditm)
 			if autoupd == True:
 				if self.anams == []:
