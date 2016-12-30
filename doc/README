@@ -7,7 +7,20 @@ Frugal is a simple yet powerful personal finance and stock portfolio management
 application. It provides quick on-line stock quote and currency rate updates 
 and easy to understand graphical and textual views of your financial situation. 
 
-More information available at http://frugal.sourceforge.net
+More information available at https://github.com/tomluvoe/frugal
+
+Note
+****
+The project has recently been moved from sourceforge to github. At the same time
+the executables for the project have been removed. However, Python has continued
+to evolved and installation has been simplied.
+
+To run Frugal, download Anaconda, Python 2.7, from: 
+https://www.continuum.io/downloads
+
+Install numpy, wx and matplotlib and run with pythonw frugal/src/frugal.py
+
+End note.
 
 Requirements
 ************
@@ -20,7 +33,7 @@ Installation instructions
 ALL PLATFORMS
 
 Download the latest version of Frugal from
-http://sourceforge.net/project/showfiles.php?group_id=232217 .
+https://github.com/tomluvoe/frugal
 
 * Click on the latest release "0.XX", then download either the .zip or .tar.gz
   archive.
@@ -102,7 +115,7 @@ Find the 'demo' directory and click Open.
   and then restart Frugal.
 
 A user's guide is available on the project page 
-http://frugal.sourceforge.net 
+https://github.com/tomluvoe/frugal
 
 Change log
 **********
