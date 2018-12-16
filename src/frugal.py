@@ -1,3 +1,7 @@
+import sys
+sys.path.append('/usr/local/lib/python2.7/site-packages')
+
+
 """
 Frugal - Copyright 2006-2011 Thomas Larsson
 

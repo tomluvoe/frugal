@@ -24,6 +24,8 @@ import socket
 import urllib2
 import json
 from datetime import date,datetime,timedelta
+import requests
+from user_agent import generate_user_agent
 
 from numpy import *
 from numpy import array as nparray
@@ -818,6 +820,7 @@ class datacoll_c:
 		shareids = []
 		sharenams = []
 		bloomshares = []
+		quotes = {}
 		if not pd == False:
 			pd.Update(10,'Preparing shares..')
 		if shares == []:
@@ -844,20 +847,15 @@ class datacoll_c:
 		if len(shtmp) > 0:
 			delta = 75/len(shtmp)
 		for i,symbol in enumerate(shtmp):
-			url = "https://www.bloomberg.com/markets/api/quote-page/%s" % symbol[0]
-			print url
-			try:
-				if not pd == False:
-					pd.Update(delta*i+20,'Downloading share prices..')
-				fd = urllib2.urlopen(url)
-				bloom = fd.read()
-				fd.close()
-				read_json = json.loads(bloom)
-				nav = str(read_json['basicQuote']['price'])
-				nam = str(read_json['basicQuote']['name'])
-				dat = str(read_json['basicQuote']['priceDate'])
+			ticker = symbol[0].split()[0]
+			ticker_key = str(ticker)
+			ticker_key = ticker_key.translate(None, ':')
+			if ticker_key in quotes.keys():
+				#symbol = quotes[ticker_key]['symbol']
+				nav = quotes[ticker_key]['nav']
+				nam = quotes[ticker_key]['nam']
+				dat = quotes[ticker_key]['dat']
 				print symbol,nav,nam,dat
-				# add quote to project
 				sharenams.append([symbol[0],nam])
 				mosdate = datetime.strptime(dat,'%m/%d/%Y')
 				if autoupd == True:
@@ -868,8 +866,35 @@ class datacoll_c:
 					if not ditm['a'] == 0:
 						self.qdict.addtodict(ditm)
 				bloomshares.append([symbol[0],nav,'9:00PM',mosdate.strftime('%m/%d/%Y'),nam])
-			except IOError:
-				pass
+			else:
+				url = "https://www.bloomberg.com/markets/api/quote-page/%s" % ticker
+				print url
+				bloom = ""
+				try:
+					if not pd == False:
+						pd.Update(delta*i+20,'Downloading share prices..')
+					r = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
+					bloom = r.content
+					read_json = json.loads(bloom)
+					nav = str(read_json['basicQuote']['price'])
+					nam = str(read_json['basicQuote']['name'])
+					dat = str(read_json['basicQuote']['priceDate'])
+					print symbol,nav,nam,dat
+					quotes[ticker_key] = {'symbol':symbol, 'nam':nam, 'nav': nav, 'dat':dat}
+					# add quote to project
+					sharenams.append([symbol[0],nam])
+					mosdate = datetime.strptime(dat,'%m/%d/%Y')
+					if autoupd == True:
+						ditm = {}
+						ditm['d'] = mosdate.strftime('%Y%m%d')
+						ditm['p'] = nav
+						ditm['a'] = symbol[1]
+						if not ditm['a'] == 0:
+							self.qdict.addtodict(ditm)
+					bloomshares.append([symbol[0],nav,'9:00PM',mosdate.strftime('%m/%d/%Y'),nam])
+				except (IOError, ValueError) as e:
+					#print bloom
+					pass
 		if autoupd == True:
 			if self.anams == []:
 				self.anams = sharenams
@@ -915,6 +940,92 @@ class datacoll_c:
 		return yhoshares
 
 	def getyahooquotes(self,pd=False,shares=[]):
+	# get latest mutual fund quotes from morningstar dot se
+		groups = self.getgrouplabels(self.GROUPS[2][0])
+		shareurl = ''
+		shareids = []
+		sharenams = []
+		mornshares = []
+		if not pd == False:
+			pd.Update(10,'Preparing shares..')
+		if shares == []:
+			autoupd = True
+			for g in groups:
+				assets = self.getdassets(g,mini=2)
+				for a in assets:
+					shares.append(a[0])
+					shareids.append(a[1])
+		else:
+			autoupd = False
+		shtmp = []
+		if autoupd == True:
+			for i,s in enumerate(shares):
+				if not pd == False:
+					pd.Update(10)
+				s = s.split()[0]
+				#GROUPS[2][3][1][1][0-1]
+				#print(s,shareids[i],self.GROUPS[2][3][1][1][0],self.GROUPS[2][3][1][1][1],len(s))
+				if (int(shareids[i]) < self.GROUPS[2][3][1][1][0] or int(shareids[i]) > self.GROUPS[2][3][1][1][1] or (len(s) > 5 and '.' not in s)) or self.datautils.isisin(s) or self.datautils.ismorn(s) or self.datautils.isbloom(s):
+					continue
+#			ticker = symbol[0].split()[0]
+				shtmp.append([s.split()[0],shareids[i]])
+		else:
+			shtmp = [shares]
+		socket.setdefaulttimeout(10)
+		delta = 0
+		if len(shtmp) > 0:
+			delta = 75/len(shtmp)
+		for i,symbol in enumerate(shtmp):
+			url = "https://finance.yahoo.com/quote/%s" % symbol[0]
+			print url
+			try:
+				if not pd == False:
+					pd.Update(delta*i+20,'Downloading share prices..')
+					page_response = requests.get(url, headers={'User-Agent': generate_user_agent(device_type="desktop", os=('mac', 'linux'))}, timeout=10)
+					if page_response.status_code == 200:
+						content_lines = page_response.content.splitlines()
+						for l in content_lines:
+							if l.startswith(b"root.App.main"):
+								m = re.search('({.*})', str(l))
+								#n = re.search('currentPrice\":{\"raw\":(.*?),',m.group(1))
+								n = re.search(symbol[0]+'\":{(.*?)regularMarketPrice\":{\"raw\":(.*?),',m.group(1))
+								nav = [n.group(2)]
+								nam = []
+								n = re.search('\"time\":\"(.*?)T', m.group(1))
+								dat = [n.group(1)]
+								print symbol,nav,nam,dat
+								if nav == [] or dat == []:
+									continue
+								if nam == []:
+									nam = symbol[0]
+								pcom = re.compile(',')
+								nav[0] = pcom.sub('',nav[0])
+								if not self.datautils.isfloat(nav[0]):
+									continue
+								# add quote to project
+								sharenams.append([symbol[0],nam[0]])
+								mosdate = datetime.strptime(dat[0],'%Y-%m-%d')
+								if autoupd == True:
+									ditm = {}
+									ditm['d'] = mosdate.strftime('%Y%m%d')
+									ditm['p'] = nav[0]
+									ditm['a'] = symbol[1]
+									if not ditm['a'] == 0:
+										self.qdict.addtodict(ditm)
+								mornshares.append([symbol[0],nav[0],'9:00PM',mosdate.strftime('%m/%d/%Y'),nam[0]])
+			except IOError:
+				pass
+		if autoupd == True:
+			if self.anams == []:
+				self.anams = sharenams
+			else:
+				for sn in sharenams:
+					self.anams.append(sn)
+		if not pd == False:
+			pd.Update(95,'Done')
+		return mornshares
+
+	def getyahooquotes_old(self,pd=False,shares=[]):
 	# get latest share quotes of list shares from yahoo finance
 		groups = self.getgrouplabels(self.GROUPS[2][0])
 		shareurl = ''
@@ -947,7 +1058,8 @@ class datacoll_c:
 		if shareurl == '':
 			return yhoshares
 		shareids = shtmp
-		yahoourl = 'http://finance.yahoo.com/d/quotes.csv?s=%s&f=sl1d1t1n' % shareurl
+		#yahoourl = 'http://finance.yahoo.com/d/quotes.csv?s=%s&f=sl1d1t1n' % shareurl
+		yahoourl = 'https://finance.yahoo.com/quote/%s' % shareurl
 		print yahoourl
 		socket.setdefaulttimeout(10)
 		if not pd == False:
@@ -1031,6 +1143,7 @@ class datacoll_c:
 			for i,s in enumerate(shares):
 				if not pd == False:
 					pd.Update(10)
+				s = s.split()[0]
 				if not self.datautils.ismorn(s):
 					continue
 				shtmp.append([s,shareids[i]])
@@ -1043,26 +1156,39 @@ class datacoll_c:
 		for i,symbol in enumerate(shtmp):
 			#url = "http://quote.morningstar.com/stock/s.aspx?t=%s" % symbol[0]
 			#url = "http://quote.morningstar.com/fund/f.aspx?t=%s" % symbol[0]
-			#url = "http://morningstar.se/Funds/Quicktake/Overview.aspx?perfid=%s" % symbol[0]
-			url = "http://quote.morningstar.com/fund/chart.aspx?t=%s" % symbol[0]
+			url = "https://morningstar.se/Funds/Quicktake/Overview.aspx?perfid=%s" % symbol[0]
+			#url = "http://quote.morningstar.com/fund/chart.aspx?t=%s" % symbol[0]
 			print url
 			try:
+				nav = []
+				dat = []
+				nam = []
 				if not pd == False:
 					pd.Update(delta*i+20,'Downloading share prices..')
-				fd = urllib2.urlopen(url)
-				morn = fd.read()
-				fd.close()
-				pnav = re.compile('NAV:"(\d*?\,?\d+?.\d+?)"')
-				pnam = re.compile('CompanyName:"(.+?)"')
-				pdat = re.compile('LastDate:"(\d{4}-\d{2}-\d{2})')
-				nav = pnav.findall(morn)
-				nam = pnam.findall(morn)
-				dat = pdat.findall(morn)
-				print symbol,nav,nam,dat
+				#fd = urllib2.urlopen(url)
+				#morn = fd.read()
+				#fd.close()
+				#pnav = re.compile('NAV:"(\d*?\,?\d+?.\d+?)"')
+				#pnam = re.compile('CompanyName:"(.+?)"')
+				#pdat = re.compile('LastDate:"(\d{4}-\d{2}-\d{2})')
+				#nav = pnav.findall(morn)
+				#nam = pnam.findall(morn)
+				#dat = pdat.findall(morn)
+				page_response = requests.get(url, headers={'User-Agent': generate_user_agent(device_type="desktop", os=('mac', 'linux'))}, timeout=10)
+				if page_response.status_code == 200:
+					content_lines = page_response.content.splitlines()
+					for l in content_lines:
+						m = re.search('Senaste NAV</td><td>(.*?) [A-Z]{3}</td><td>(.*?)</td>', str(l))
+						if m:
+							nav = m.group(1).replace('.','')
+							nav = nav.replace(',','.')
+							nav = [nav.replace(' ','')]
+							dat = [m.group(2)]
+					print symbol,nav,nam,dat
 				if nav == [] or dat == []:
 					continue
 				if nam == []:
-					nam = symbol[0]
+					nam = [symbol[0]]
 				pcom = re.compile(',')
 				nav[0] = pcom.sub('',nav[0])
 				if not self.datautils.isfloat(nav[0]):

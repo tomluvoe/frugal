@@ -127,13 +127,14 @@ class datautils_c:
 		return True
 
 	def isbloom(self,s):
-		p = re.compile('\A[A-Z0-9]+\:[A-Z]{2}\Z')
+#		p = re.compile('\A[A-Z0-9/]+\:[A-Z]{2}\Z')
+		p = re.compile('\A[-A-Z0-9/]+\:[A-Z]{2}')
 		if p.match(s) == None:
 			return False
 		return True
 
 	def ismorn(self,s):
-		p = re.compile('\A[A-Z0-9]{10}\Z')
+		p = re.compile('\A[A-Z0-9]{10}')
 		if p.match(s) == None:
 			return False
 		return True

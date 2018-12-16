@@ -124,9 +124,9 @@ class plugin_c(wx.Panel):
 			else:
 				lc.InsertColumn(i,c)
 		for i,r in enumerate(rows):
-			idx = lc.InsertStringItem(sys.maxint,r[0])
+			idx = lc.InsertStringItem(sys.maxint,r[0].decode('latin-1'))
 			for j,vv in enumerate(r):
-				lc.SetStringItem(idx,j,vv)
+				lc.SetStringItem(idx,j,vv.decode('latin-1'))
 		for i,c in enumerate(columns):
 			lc.SetColumnWidth(i,wx.LIST_AUTOSIZE)
 		if not zerowidth == -1:
