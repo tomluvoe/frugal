@@ -27,7 +27,7 @@ class pportfolio_c(plugin_c):
 	NAME = 'Stock Portfolio'
 	FUNCTIONS = ['Transaction History','Stock Split']
 
-	# ATTR view type - plot, list, history, detailed.. 
+	# ATTR view type - plot, list, history, detailed..
 	def createpanel(self,func='',attr=[]):
 		self.func = func
 
@@ -75,7 +75,7 @@ class pportfolio_c(plugin_c):
 		self.splity = self.textctrl('1')
 		self.splitd = self.textctrl(todaysdate)
 		self.splitp = self.textctrl('1.0')
-		
+
 		column2.append(self.split)
 		column2.append(self.statictext(''))
 		column2.append(self.splitx)
@@ -91,7 +91,7 @@ class pportfolio_c(plugin_c):
 
 	def handlesplitbutton(self,event):
 		du = datautils_c()
-		
+
 		sel = self.split.GetCurrentSelection()
 		s = self.shares[sel][1]
 		st = self.dc.accticker(s)
@@ -107,7 +107,7 @@ class pportfolio_c(plugin_c):
 		qn = float(q)*float(x)/float(y)
 		qeven = qn-round(qn)
 		an = float(a)*float(q)/float(qn)
-		
+
 		if not (du.isint(d) and int(d) > 19700101 and int(d) < 21000101):
 			errmsg = 'Input data is not correct. Date must be YYYYMMDD.'
 			self.errdlg(errmsg)
@@ -184,7 +184,7 @@ class pportfolio_c(plugin_c):
 				return
 
 		self.msgdlg('The stock split has been added to the project.')
-		
+
 	def portfoliopanel(self):
 		group = self.dc.GROUPS[2][0]
 		du = datautils_c()
@@ -225,7 +225,7 @@ class pportfolio_c(plugin_c):
 		year0 = date.today().year
 		groups = self.creategrouplist('ASSETSNOACCOUNT')[0]
 		assets = []
-		for i in range(2):
+		for i in range(3):
 			year = year0 - i
 			#self.dc.getdtransactionhist(groups[0],yfrom=year,yto=year,trtype='buy')
 			sales = []
@@ -258,7 +258,7 @@ class pportfolio_c(plugin_c):
 		#columns.append('Profit/Loss')
 		#columns.append('Profit/Loss')
 		self.createlistctrl(assets,columns)
-		
+
 	# Copied from pbalance_c.py
 	def createassetspanel(self,group):
 		groups = self.dc.getgrouplabels(group)
@@ -293,7 +293,7 @@ class pportfolio_c(plugin_c):
 
 	def createhassetspanel(self,group,year=0):
 		du = datautils_c()
-		columns = self.dc.getgrouplabels(group) 
+		columns = self.dc.getgrouplabels(group)
 		values = self.dc.gethassets(columns,year=year)
 		columns.append('Total')
 		columns.append('%')
@@ -310,7 +310,7 @@ class pportfolio_c(plugin_c):
 			values[i].append(du.rstr(equ2*100,1)+' %')
 			equ2 = equ
 		values.reverse()
-		self.createlistctrl(values,columns,highlight=1) 
+		self.createlistctrl(values,columns,highlight=1)
 
 	def createhassetsplot(self,group,year=0):
 		du = datautils_c()
@@ -320,4 +320,3 @@ class pportfolio_c(plugin_c):
 		for i,c in enumerate(columns):
 			values.append(self.getarraycolumn(data,i))
 		self.createplot(self.LINEPLOT,values,columns,'Stock Portfolio',yearly=year)
-

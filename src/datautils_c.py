@@ -61,7 +61,10 @@ class datautils_c:
 			fcol = where(adatmat==fs)
 			tcol = where(adatmat==ts)
 			row[0,0] = datrow[0] #date
-			row[0,fcol[0][0]+1] = -fq
+			try:
+				row[0,fcol[0][0]+1] = -fq
+			except IndexError:
+				print tq
 			row[0,tcol[0][0]+1] = tq
 			calcmat = vstack((calcmat,row))
 		if not store == -1:

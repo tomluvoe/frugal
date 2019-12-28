@@ -712,15 +712,15 @@ class datacoll_c:
 		row = mat[-1,:]
 		row0 = self.getmdrow(mat,dmax)
 		row1 = self.getmdrow(mat,dmin,1)
-		if not row0 == None:
+		if type(row0) != str:
 			row = row0
-		if not row1 == None:
+		if type(row1) != str:
 			row = row - row1
 		return row
 
 	def getmdrow(self,mat,dat=0,minus=0):
 	# get row in matrix where date is dat, deduct 0 or 1 rows
-		row = None
+		row = ''
 		if not dat == 0:
 			r = where(self.datematrix[:,0] >= dat)
 			if not r[0].size == 0:

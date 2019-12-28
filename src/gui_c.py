@@ -92,15 +92,25 @@ class gui_c(wx.Frame):
 		#self.menubar.Append(self.menuupdate,'Update')
 		# ADD MENU AND EVENTS
 		self.SetMenuBar(self.menubar)
-		wx.EVT_MENU(self,gui_c.ID_NEWPROJ,self.new)
-		wx.EVT_MENU(self,gui_c.ID_OPEPROJ,self.open)
-		wx.EVT_MENU(self,gui_c.ID_SAVPROJ,self.save)
-		wx.EVT_MENU(self,gui_c.ID_EXIT,self.quit)
-		wx.EVT_MENU(self,gui_c.ID_UPDPROJ,self.updateproject)
-		wx.EVT_MENU(self,gui_c.ID_CALPROJ,self.calc)
-		wx.EVT_MENU(self,gui_c.ID_USERGU,self.usersguide)
-		wx.EVT_MENU(self,gui_c.ID_ABOUT,self.about)
-		wx.EVT_MENU(self,gui_c.ID_UPDATE,self.showupdate)
+		#self.Bind(wx.EVT_MENU, self.OnExit, id=wx.ID_EXIT)
+		#wx.EVT_MENU(self,gui_c.ID_NEWPROJ,self.new)
+		self.Bind(wx.EVT_MENU, self.new, id=gui_c.ID_NEWPROJ)
+		#wx.EVT_MENU(self,gui_c.ID_OPEPROJ,self.open)
+		self.Bind(wx.EVT_MENU, self.open, id=gui_c.ID_OPEPROJ)
+		#wx.EVT_MENU(self,gui_c.ID_SAVPROJ,self.save)
+		self.Bind(wx.EVT_MENU, self.save, id=gui_c.ID_SAVPROJ)
+		#wx.EVT_MENU(self,gui_c.ID_EXIT,self.quit)
+		self.Bind(wx.EVT_MENU, self.quit, id=gui_c.ID_EXIT)
+		#wx.EVT_MENU(self,gui_c.ID_UPDPROJ,self.updateproject)
+		self.Bind(wx.EVT_MENU, self.updateproject, id=gui_c.ID_UPDPROJ)
+		#wx.EVT_MENU(self,gui_c.ID_CALPROJ,self.calc)
+		self.Bind(wx.EVT_MENU, self.calc, id=gui_c.ID_CALPROJ)
+		#wx.EVT_MENU(self,gui_c.ID_USERGU,self.usersguide)
+		self.Bind(wx.EVT_MENU, self.usersguide, id=gui_c.ID_USERGU)
+		#wx.EVT_MENU(self,gui_c.ID_ABOUT,self.about)
+		self.Bind(wx.EVT_MENU, self.about, id=gui_c.ID_ABOUT)
+		#wx.EVT_MENU(self,gui_c.ID_UPDATE,self.showupdate)
+		self.Bind(wx.EVT_MENU, self.showupdate, id=gui_c.ID_UPDATE)
 		self.Bind(wx.EVT_CLOSE,self.closeprogram)
 		# SPLITTER
 		self.splitv = wx.SplitterWindow(self)
@@ -196,11 +206,11 @@ class gui_c(wx.Frame):
 			if rv == wx.ID_YES:
 				self.owner.datacoll.savefiles()
 			if rv == wx.ID_CANCEL:
-				return	
+				return
 		self.Destroy()
 
 	def quit(self,event):
-		self.Close()	
+		self.Close()
 
 	def updateproject(self,event):
 		if self.projectopen == False:
@@ -231,7 +241,7 @@ class gui_c(wx.Frame):
 		elif updateavailable == -1:
 			msg = 'Failed to read latest version! Please retry.'
 		else:
-			msg = 'No new version of Frugal available!' 
+			msg = 'No new version of Frugal available!'
 		notice = wx.MessageDialog(self,msg,self.pinfo,wx.OK|wx.ICON_INFORMATION)
 		notice.ShowModal()
 		notice.Destroy()
@@ -315,7 +325,7 @@ class gui_c(wx.Frame):
 	ID_GHISTORYY = 1015
 	ID_UPDPROJ = 1016
 	ID_USERGU = 1017
-	
+
 class appl_c(wx.App):
 	def OnInit(self):
 		return True
@@ -323,4 +333,3 @@ class appl_c(wx.App):
 	def setup(self,program,version,about,owner):
 		frame = gui_c(None,program,version,about,owner)
 		frame.Show()
- 

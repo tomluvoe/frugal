@@ -20,6 +20,7 @@ import sys
 import datetime
 
 import wx
+import wx.adv
 import wx.lib.mixins.listctrl as lcmix
 
 import matplotlib
@@ -124,9 +125,11 @@ class plugin_c(wx.Panel):
 			else:
 				lc.InsertColumn(i,c)
 		for i,r in enumerate(rows):
-			idx = lc.InsertStringItem(sys.maxint,r[0].decode('latin-1'))
+			#idx = lc.InsertStringItem(sys.maxint,r[0].decode('latin-1'))
+			idx = lc.InsertItem(sys.maxint,r[0].decode('latin-1'))
 			for j,vv in enumerate(r):
-				lc.SetStringItem(idx,j,vv.decode('latin-1'))
+				#lc.SetStringItem(idx,j,vv.decode('latin-1'))
+				lc.SetItem(idx,j,vv.decode('latin-1'))
 		for i,c in enumerate(columns):
 			lc.SetColumnWidth(i,wx.LIST_AUTOSIZE)
 		if not zerowidth == -1:
@@ -223,7 +226,7 @@ class plugin_c(wx.Panel):
 				miny = miny - 1
 			datemin = datetime.date(miny,minm,1)
 			datemax = datetime.date(maxy,maxm,1)
-			sp1.set_xlim(datemin, datemax)			
+			sp1.set_xlim(datemin, datemax)
 			fig.autofmt_xdate()
 			sp1.legend(loc='upper left')
 		else:
@@ -268,8 +271,8 @@ class plugin_c(wx.Panel):
 
 	# GUI HELP FUNCTION
 	def datepicker(self):
-		return wx.DatePickerCtrl(self, -1,style=wx.DP_DROPDOWN)
-	
+		return wx.adv.DatePickerCtrl(self, -1,dt=wx.DateTime(),style=wx.adv.DP_DROPDOWN)
+
 	def datepicker_getdate(self,datepicker):
 		date = datepicker.GetValue()
 		datestr = date.FormatISODate()
@@ -365,4 +368,3 @@ class listctrledit_c(wx.ListCtrl,lcmix.TextEditMixin):
 	def __init__(self,parent,style):
 		wx.ListCtrl.__init__(self,parent,style=style)
 		lcmix.TextEditMixin.__init__(self)
-

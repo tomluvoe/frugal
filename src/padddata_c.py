@@ -146,7 +146,8 @@ class padddata_c(plugin_c):
 	#TODO REFACTOR
 	def handlelistctrlselect(self,event):
 		du = datautils_c()
-		idx = event.m_itemIndex
+		#idx = event.m_itemIndex
+		idx = event.GetIndex()
 		col = event.m_col
 		itm = event.m_item
 		qts = 0
@@ -465,4 +466,3 @@ class padddata_c(plugin_c):
 			self.abal.SetValue('0.0')
 			stdmsg = 'The asset or liability has been added to the project.'
 		self.msgdlg(stdmsg)
-
