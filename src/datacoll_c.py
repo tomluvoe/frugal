@@ -1,5 +1,5 @@
 """
-Frugal - Copyright 2006-2011 Thomas Larsson
+Frugal - Copyright 2006-2020 Thomas Larsson
 
 This file is part of Frugal.
 
