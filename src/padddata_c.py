@@ -118,8 +118,8 @@ class padddata_c(plugin_c):
 		column2.append(self.tprice)
 		column2.append(self.tcommi)
 
-	        btn = wx.Button(self,-1,'Add')
-	        self.Bind(wx.EVT_BUTTON,self.handleaddbutton,btn)
+		btn = wx.Button(self,-1,'Add')
+		self.Bind(wx.EVT_BUTTON,self.handleaddbutton,btn)
 		column1.append(btn)
 
 		self.createsizercols([column1,column2])
@@ -222,8 +222,8 @@ class padddata_c(plugin_c):
 		self.acco = self.textctrl(wide=True)
 		self.acur = self.choicelist(self.currencies)
 		self.adat = self.datepicker()
-	        btn = wx.Button(self,-1,'Add')
-	        self.Bind(wx.EVT_BUTTON,self.handleaddbutton,btn)
+		btn = wx.Button(self,-1,'Add')
+		self.Bind(wx.EVT_BUTTON,self.handleaddbutton,btn)
 
 		if self.func == padddata_c.FUNCTIONS[0]:
 			column1.append(self.statictext('Account name'))
@@ -242,8 +242,8 @@ class padddata_c(plugin_c):
 			column1.append(self.statictext(''))
 			self.abal = self.textctrl('0.0')
 			self.apri = self.textctrl('1.0')
-		        yhobtn = wx.Button(self,-1,'Get latest price from the internet')
-		        self.Bind(wx.EVT_BUTTON,self.handleyhobutton,yhobtn)
+			yhobtn = wx.Button(self,-1,'Get latest price from the internet')
+			self.Bind(wx.EVT_BUTTON,self.handleyhobutton,yhobtn)
 			self.atyp = self.choicelist(self.groups[0])
 		elif self.func == padddata_c.FUNCTIONS[5]:
 			self.groups = self.creategrouplist('ASSETSLIABILITIES')
@@ -307,9 +307,8 @@ class padddata_c(plugin_c):
 		ditm['c'] = cname
 		ditm['p'] = crate
 		dict.addtodict(ditm)
-
-                stdmsg = 'The currency has been added to the project.'
-                self.msgdlg(stdmsg)
+		stdmsg = 'The currency has been added to the project.'
+		self.msgdlg(stdmsg)
 
 	def handleecbbutton(self,event):
 		currency = self.cname.GetStringSelection()

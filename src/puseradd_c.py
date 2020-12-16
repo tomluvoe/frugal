@@ -118,9 +118,9 @@ class puseradd_c(plugin_c):
 			column2.append(self.quantity)
 			column2.append(self.commission)
 
-	        btn = wx.Button(self,-1,'Add')
-	        self.Bind(wx.EVT_BUTTON,self.handleaddbutton,btn)
-	        column1.append(btn)
+		btn = wx.Button(self,-1,'Add')
+		self.Bind(wx.EVT_BUTTON,self.handleaddbutton,btn)
+		column1.append(btn)
 
 		self.createsizercols([column1,column2])
 
@@ -221,4 +221,3 @@ class puseradd_c(plugin_c):
 			self.price.SetValue('')
 			self.commission.SetValue('')
 			self.quantity.SetValue('')
-

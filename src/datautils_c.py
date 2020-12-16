@@ -20,10 +20,10 @@ along with Frugal.  If not, see <http://www.gnu.org/licenses/>.
 from numpy import *
 from datetime import date
 import threading
-import Queue
+import queue
 import re
 
-duqueue = Queue.Queue(0)
+duqueue = queue.Queue(0)
 
 class datautils_c:
 	def __init__(self):
@@ -51,7 +51,7 @@ class datautils_c:
 		calcmat = zeros((1,adatmat.shape[0]+1))
 		if erow == -1:
 			erow = datmat.shape[0]
-		for i in range(srow,erow):
+		for i in range(int(srow),int(erow)):
 			row = zeros((1,adatmat.shape[0]+1))
 			datrow = datmat[i,:]
 			fs = datmat[i,attr.index('fs')]
@@ -64,7 +64,7 @@ class datautils_c:
 			try:
 				row[0,fcol[0][0]+1] = -fq
 			except IndexError:
-				print tq
+				print(tq)
 			row[0,tcol[0][0]+1] = tq
 			calcmat = vstack((calcmat,row))
 		if not store == -1:

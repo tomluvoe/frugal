@@ -34,7 +34,7 @@ class datafile_c:
 		self.parent = parent
 		self.unsaved = False
 		if not os.path.exists(self.filename):
-			return None 
+			return None
 		dom = parse(self.filename)
 		elements = dom.getElementsByTagName(tag)
 		self.dataok = True
@@ -55,7 +55,8 @@ class datafile_c:
 
 	def sortdata(self):
 		if self.dataok == True and self.sort == True:
-        		self.dictionary.sort(cmp=lambda x,y: cmp(x['d'],y['d']))
+        		#self.dictionary.sort(cmp=lambda x,y: cmp(x['d'],y['d']))
+				self.dictionary = sorted(self.dictionary, key=lambda dict: dict['d'])
 
 	def updatedict(self,index,column,data):
 		self.dictionary[index][self.attributes[column]] = data
@@ -64,7 +65,7 @@ class datafile_c:
 
 	def addtodict(self,dict):
 		for a in self.attributes:
-			if not dict.has_key(a):
+			if a not in dict:
 				return False
 		self.dictionary.append(dict)
 		self.sortdata()
@@ -90,7 +91,7 @@ class datafile_c:
 					attrval = "%s-%s-%s"%(yr,mo,da)
 				else:
 					attrval = itm[attr]
-				f.write(unicode(attrval))
+				f.write(str(attrval))
 				f.write("\"")
 			f.write("/>\n")
 		f.write("</%s>\n"%self.tagxml)

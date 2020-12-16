@@ -22,7 +22,7 @@ along with Frugal.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 import socket
-import urllib2
+import urllib.request, urllib.error, urllib.parse
 import time
 import threading
 import sys
@@ -65,7 +65,7 @@ class frugalupd_c:
 	def do(self):
 		socket.setdefaulttimeout(5)
 		try:
-			fd = urllib2.urlopen('http://www.samoht.se/frugal/latest_release')
+			fd = urllib.request.urlopen('http://www.samoht.se/frugal/latest_release')
 			lr = fd.read(15)
 			fd.close()
 			fv = lr.split('.')

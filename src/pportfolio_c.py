@@ -83,8 +83,8 @@ class pportfolio_c(plugin_c):
 		column2.append(self.splitd)
 		column2.append(self.splitp)
 
-	        btn = wx.Button(self,-1,'Add Stock Split')
-	        self.Bind(wx.EVT_BUTTON,self.handlesplitbutton,btn)
+		btn = wx.Button(self,-1,'Add Stock Split')
+		self.Bind(wx.EVT_BUTTON,self.handlesplitbutton,btn)
 		column1.append(btn)
 
 		self.createsizercols([column1,column2])

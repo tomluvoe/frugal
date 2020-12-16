@@ -21,7 +21,7 @@ import os
 import sys
 import re
 import socket
-import urllib2
+import urllib.request, urllib.error, urllib.parse
 import json
 from datetime import date,datetime,timedelta
 import requests
@@ -116,10 +116,10 @@ class datacoll_c:
 		# load dictionaries, sort dates
 		if not pd == False:
 			pd.Update(20,'Reading transaction data..')
-                self.tdict = datafile_c(self,dir+'/'+self.tfile,self.ttags[0],self.ttags[1],self.tattr,True)
+		self.tdict = datafile_c(self,dir+'/'+self.tfile, self.ttags[0], self.ttags[1], self.tattr, True)
 		if not pd == False:
 			pd.Update(40,'Reading account data..')
-                self.adict = datafile_c(self,dir+'/'+self.afile,self.atags[0],self.atags[1],self.aattr)
+		self.adict = datafile_c(self,dir+'/'+self.afile,self.atags[0],self.atags[1],self.aattr)
 		if not pd == False:
 			pd.Update(60,'Reading currency data..')
 		self.cdict = datafile_c(self,dir+'/'+self.cfile,self.ctags[0],self.ctags[1],self.cattr,True)
@@ -147,7 +147,7 @@ class datacoll_c:
 		if not pd == False:
 			pd.Update(20,'Preparing transactions.. Please wait.')
 		#self.tcmatrix = self.datautils.tdattocalc(self.tdmatrix,self.tattr[0:9],self.admatrix,False)
-                self.tcmatrix = self.datautils.tdattocalc(self.tdmatrix,self.tattr[0:9],self.admatrix)
+		self.tcmatrix = self.datautils.tdattocalc(self.tdmatrix,self.tattr[0:9],self.admatrix)
 		# accumulative matrix 1110000 one row per month vs accounts
 		if not pd == False:
 			pd.Update(60,'Preparing matrices..')
@@ -250,10 +250,10 @@ class datacoll_c:
 		cgvector = where((self.admatrix[:,0] >= nmin) & (self.admatrix[:,0] <= nmax),1,0)
 		return cgvector
 
-	def calcdvector(self,dmin=0,dmax=sys.maxint):
+	def calcdvector(self,dmin=0,dmax=sys.maxsize):
 	# calculate date vector to summarize a diff matrix
 		if dmax == 0: #workaround as 0 means undefined
-			dmax = sys.maxint
+			dmax = sys.maxsize
 		cdvector = where((self.datematrix[:,0] >= dmin) & (self.datematrix[:,0] <= dmax),1,0)
 		return cdvector
 
@@ -592,7 +592,7 @@ class datacoll_c:
 					cur = self.acccurrency(t[5])
 					cur1 = self.cdlist[cur]
 					appsqua = apps*qua
-					print str(int(dat)),nam,self.datautils.rstr(qua,1),cur0,round(appsqua),round(com),round(appsqua+com)
+					print(str(int(dat)),nam,self.datautils.rstr(qua,1),cur0,round(appsqua),round(com),round(appsqua+com))
 					if not appsqua == 0 and cur0 == cur1:
 						pro0 = self.datautils.rstr(priqua-appsqua-com,2)+' '+cur0
 						pro1 = self.datautils.rstr(100*(priqua-appsqua-com)/appsqua,2)+' %'
@@ -850,12 +850,12 @@ class datacoll_c:
 			ticker = symbol[0].split()[0]
 			ticker_key = str(ticker)
 			ticker_key = ticker_key.translate(None, ':')
-			if ticker_key in quotes.keys():
+			if ticker_key in list(quotes.keys()):
 				#symbol = quotes[ticker_key]['symbol']
 				nav = quotes[ticker_key]['nav']
 				nam = quotes[ticker_key]['nam']
 				dat = quotes[ticker_key]['dat']
-				print symbol,nav,nam,dat
+				print(symbol,nav,nam,dat)
 				sharenams.append([symbol[0],nam])
 				mosdate = datetime.strptime(dat,'%m/%d/%Y')
 				if autoupd == True:
@@ -868,7 +868,7 @@ class datacoll_c:
 				bloomshares.append([symbol[0],nav,'9:00PM',mosdate.strftime('%m/%d/%Y'),nam])
 			else:
 				url = "https://www.bloomberg.com/markets/api/quote-page/%s" % ticker
-				print url
+				print(url)
 				bloom = ""
 				try:
 					if not pd == False:
@@ -879,7 +879,7 @@ class datacoll_c:
 					nav = str(read_json['basicQuote']['price'])
 					nam = str(read_json['basicQuote']['name'])
 					dat = str(read_json['basicQuote']['priceDate'])
-					print symbol,nav,nam,dat
+					print(symbol,nav,nam,dat)
 					quotes[ticker_key] = {'symbol':symbol, 'nam':nam, 'nav': nav, 'dat':dat}
 					# add quote to project
 					sharenams.append([symbol[0],nam])
@@ -925,7 +925,7 @@ class datacoll_c:
 		if not pd == False:
 			pd.Update(20,'Connecting to the internet..')
 		try:
-			fd = urllib2.urlopen(yahoourl)
+			fd = urllib.request.urlopen(yahoourl)
 			yho = fd.read()
 			fd.close()
 			if not pd == False:
@@ -977,7 +977,7 @@ class datacoll_c:
 			delta = 75/len(shtmp)
 		for i,symbol in enumerate(shtmp):
 			url = "https://finance.yahoo.com/quote/%s" % symbol[0]
-			print url
+			print(url)
 			try:
 				if not pd == False:
 					pd.Update(delta*i+20,'Downloading share prices..')
@@ -993,7 +993,7 @@ class datacoll_c:
 								nam = []
 								n = re.search('\"time\":\"(.*?)T', m.group(1))
 								dat = [n.group(1)]
-								print symbol,nav,nam,dat
+								print(symbol,nav,nam,dat)
 								if nav == [] or dat == []:
 									continue
 								if nam == []:
@@ -1060,12 +1060,12 @@ class datacoll_c:
 		shareids = shtmp
 		#yahoourl = 'http://finance.yahoo.com/d/quotes.csv?s=%s&f=sl1d1t1n' % shareurl
 		yahoourl = 'https://finance.yahoo.com/quote/%s' % shareurl
-		print yahoourl
+		print(yahoourl)
 		socket.setdefaulttimeout(10)
 		if not pd == False:
 			pd.Update(10,'Connecting to the internet..')
 		try:
-			fd = urllib2.urlopen(yahoourl)
+			fd = urllib.request.urlopen(yahoourl)
 			yho = fd.read()
 			fd.close()
 			if not pd == False:
@@ -1094,7 +1094,7 @@ class datacoll_c:
 					ditm['p'] = sh[1]
 					ditm['a'] = shareids[i]
 					if not ditm['a'] == 0 and self.accname(shareids[i]) == sh[0]:
-						print [sh[0],ditm['a']], ditm['p'], sh[4], sh[2]
+						print([sh[0],ditm['a']], ditm['p'], sh[4], sh[2])
 						self.qdict.addtodict(ditm)
 			if autoupd == True:
 				if self.anams == []:
@@ -1158,7 +1158,8 @@ class datacoll_c:
 			#url = "http://quote.morningstar.com/fund/f.aspx?t=%s" % symbol[0]
 			url = "https://morningstar.se/Funds/Quicktake/Overview.aspx?perfid=%s" % symbol[0]
 			#url = "http://quote.morningstar.com/fund/chart.aspx?t=%s" % symbol[0]
-			print url
+			url = "https://www.morningstar.se/se/funds/snapshot/snapshot.aspx?id=%s" % symbol[0]
+			print(url)
 			try:
 				nav = []
 				dat = []
@@ -1175,16 +1176,19 @@ class datacoll_c:
 				#nam = pnam.findall(morn)
 				#dat = pdat.findall(morn)
 				page_response = requests.get(url, headers={'User-Agent': generate_user_agent(device_type="desktop", os=('mac', 'linux'))}, timeout=10)
+				#print page_response
 				if page_response.status_code == 200:
 					content_lines = page_response.content.splitlines()
 					for l in content_lines:
-						m = re.search('Senaste NAV</td><td>(.*?) [A-Z]{3}</td><td>(.*?)</td>', str(l))
+						#m = re.search('Senaste NAV</td><td>(.*?) [A-Z]{3}</td><td>(.*?)</td>', str(l))
+						m = re.search("Andelskurs \(NAV\).*?>([0-9]{4}-[0-9]{2}-[0-9]{2}).*?SEK.*?([0-9]*?,[0-9]*?)<",str(l))
 						if m:
-							nav = m.group(1).replace('.','')
+							#print m.group(2)
+							nav = m.group(2).replace('.','')
 							nav = nav.replace(',','.')
 							nav = [nav.replace(' ','')]
-							dat = [m.group(2)]
-					print symbol,nav,nam,dat
+							dat = [m.group(1)]
+					print(symbol,nav,nam,dat)
 				if nav == [] or dat == []:
 					continue
 				if nam == []:
@@ -1245,7 +1249,7 @@ class datacoll_c:
 		if not pd == False:
 			pd.Update(20,'Connecting to the internet..')
 		try:
-			fd = urllib2.urlopen(seburl)
+			fd = urllib.request.urlopen(seburl)
 			seb = fd.read()
 			fd.close()
 			if not pd == False:
@@ -1261,7 +1265,7 @@ class datacoll_c:
 					continue
 				sh = y.split(';')
 				for j,s in enumerate(shtmp):
-					if s[0] == unicode(sh[1],'latin-1'):
+					if s[0] == str(sh[1],'latin-1'):
 						# add quote to project
 						if autoupd == True:
 							ditm = {}
@@ -1308,12 +1312,13 @@ class datacoll_c:
 		if not pd == False:
 			pd.Update(10,'Connecting to the internet..')
 		try:
-			fd = urllib2.urlopen(ecburl)
+			fd = urllib.request.urlopen(ecburl)
 			ecb = fd.read()
 			fd.close()
 			if not pd == False:
 				pd.Update(60,'Processing result..')
-			ecblist = ecb.split('\n')
+			#print(ecb.decode("utf-8"))
+			ecblist = ecb.decode("utf-8").split('\n')
 			delta = 0
 			if len(ecblist) > 0:
 				delta = 30/len(ecblist)
